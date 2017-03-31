@@ -1,0 +1,43 @@
+{
+    "id": "org.ekstep.gif",
+    "ver": "1.0",
+    "displayName": "GIF",
+    "author": "Sunil A S",
+    "title": "GIF Plugin",
+    "description": "",
+    "publishedDate": "",
+    "editor": {
+        "main": "editor/plugin.js",
+        "help": {
+            "src": "editor/help.md",
+            "dataType": "text"
+        },
+        "dependencies": [
+            {"type": "plugin", "plugin": "org.ekstep.assetbrowser", "ver": "1.0"}
+        ],
+        "menu": [{
+            "id": "gif",
+            "category": "main",
+            "type": "icon",
+            "toolTip": "Add GIF",
+            "title": "GIF",
+            "iconClass": "fa-file-video-o icon",
+            "onclick": {
+                "id": "org.ekstep.gif:assetbrowser:open"
+            }
+        }],
+        "behaviour": {
+            "rotatable": true
+        },
+        "configManifest": [{
+            "propertyName": "imageBrowser",
+            "title": "Image Browser",
+            "description": "Choose a  from the browser",
+            "dataType": "imagebrowser",
+            "required": true
+        }]
+    },
+    "renderer": {
+        "main": "renderer/plugin.js"
+    }
+}
